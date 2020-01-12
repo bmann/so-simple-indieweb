@@ -23,7 +23,7 @@ baseurl: # the subpath of your site, e.g. "/blog"
 url: https://indieweb.bmann.ca # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 logo: "/images/so-simple-site-logo.png" # path of site logo, e.g. "/assets/images/logo.png"
 date_format: "%B %-d, %Y"
-read_time: true
+read_time: false
 words_per_minute: 200
 mathjax: true
 google_fonts:
@@ -80,8 +80,6 @@ indiekit:
   micropub_server: bmann-indiekit.herokuapp.com
   auth_service: https://github.com/bmann
 
-
-
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -90,7 +88,7 @@ plugins:
 
 # Collections
 collections:
-  recipes:
+  photos:
     output: true
     permalink: /:collection/:path/
 
@@ -104,14 +102,15 @@ defaults:
       layout: post
       comments: true
       share: true
-  # Recipe defaults
+  # Photos defaults
   - scope:
-      path: "_recipes"
-      type: recipes
+      path: "_photos"
+      type: photos
     values:
-      layout: post
+      layout: photo
       comments: true
       share: true
+   
 
 # Site Author
 author:

@@ -1,0 +1,14 @@
+---
+title: '{{ item.alt }}'
+date: {​{ published }}
+{%- if category %}
+tag:
+{%- for item in category %}
+- {{ item }}
+{%- endfor %}
+{%- endif %}
+image: 
+  path: {{ item.value }}
+  caption: '{{ item.alt }}'
+---
+{​{ content | safe }}

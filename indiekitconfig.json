@@ -1,0 +1,20 @@
+{
+    "categories": [
+      "indieweb",
+      "opensource"
+    ],
+
+    "post-types": {
+      "photo": {
+        "name": "Photo",
+        "template": "_micropub/templates/photo.njk",
+        "post": {
+          "path": "_photos/{​{ published | date('yyyy-MM-dd') }}-{​{ slug }}.md",
+          "url": "photos/{​{ published | date('yyyy/MM') }}/{​{ slug }}"
+        },
+        "media": {
+          "path": "media/photos/{​{ published | date('yyyy/MM') }}/{​{ filename }}"
+        }
+      }
+    }
+}
