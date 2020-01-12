@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    <div class="page-wrapper">
+      {% include page-pagination.html %}
+      <header class="page-header">
+        {% if page.photo[0].alt %}
+          {% assign title = page.photo[0].alt | markdownify | strip_html %}
+        {% else %}
+          {% assign title = "Photo" %}
+        {% endif %}
+      </header>
+
+      <div class="page-content">
+
+        <div class="e-content">
+          {{ content }}
+        </div>
+        <div id="photo">
+          <img src="{{ page.photo[0].url }}" alt="{{ title }}"/>
+        </div>
+
+      <div class="page-sidebar">
+        {% include page-categories.html %}
+        {% include page-tags.html %}
+      </div>
+
+        {% if page.share %}
+          {% include social-share.html %}
+        {% endif %}
+
+        {% if site.disqus.shortname %}
+          {% include disqus-comments.html %}
+        {% endif %}
+      </div>
+    </div>
+  </article>
+</main>

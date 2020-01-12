@@ -110,7 +110,14 @@ defaults:
       layout: photo
       comments: true
       share: true
-   
+  # Bookmarks defaults
+  - scope:
+      path: "_bookmarks"
+      type: bookmarks
+    values:
+      layout: bookmark
+      comments: true
+      share: true
 
 # Site Author
 author:
