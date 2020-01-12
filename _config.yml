@@ -118,6 +118,14 @@ defaults:
       layout: bookmark
       comments: true
       share: true
+  # Notes defaults
+  - scope:
+      path: "_notes"
+      type: notes
+    values:
+      layout: note
+      comments: true
+      share: true
 
 # Site Author
 author:
