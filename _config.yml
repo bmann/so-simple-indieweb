@@ -91,6 +91,12 @@ collections:
   photos:
     output: true
     permalink: /:collection/:path/
+  bookmarks:
+    output: true
+    permalink: /:collection/:path/
+  notes:
+    output: true
+    permalink: /:collection/:path/
 
 # Front Matter Defaults
 defaults:
