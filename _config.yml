@@ -97,6 +97,9 @@ collections:
   notes:
     output: true
     permalink: /:collection/:path/
+  reposts:
+    output: true
+    permalink: /:collection/:path/
 
 # Front Matter Defaults
 defaults:
@@ -130,6 +133,14 @@ defaults:
       type: notes
     values:
       layout: note
+      comments: true
+      share: true
+  # Reposts defaults
+  - scope:
+      path: "_reposts"
+      type: reposts
+    values:
+      layout: repost
       comments: true
       share: true
 

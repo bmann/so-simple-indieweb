@@ -8,7 +8,7 @@
 
 <article class="entry h-entry">
   <header class="entry-header">
-    {% unless entry.collection == "notes" %}
+    {% if entry.collection != "notes" or entry.collection != "reposts" %}
     <h3 class="entry-title p-name">
       {% if entry.link %}
         <a class="u-bookmark-of" href="{{ entry.link }}">{{ title }}</a> <a href="{{ entry.url | relative_url }}" rel="bookmark"><span class="link-arrow">&rarr;</span></a> 
@@ -16,7 +16,7 @@
         <a href="{{ entry.url | relative_url }}" rel="bookmark">{{ title }}</a>
       {% endif %}
     </h3>
-    {% endunless %}
+    {% endif %}
     {% if entry.image.thumbnail or entry.photo %}
       {% if entry.photo[0].url %}
         {% assign entry_image = entry.photo[0].url %}
@@ -34,6 +34,13 @@
     <div class="entry-excerpt p-summary">
       {% if entry.excerpt %}
         {{ entry.excerpt | markdownify }}
+      {% endif %}
+      {% if entry.collection == "reposts" and entry.repost-of %}
+        <div class="repost-of">
+        <p>(repost)</p>
+        <blockquote class="twitter-tweet" data-lang="en"><a href="{{ entry.repost-of }}"></a></blockquote>
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
       {% endif %}
     </div>
   {% endunless %}
