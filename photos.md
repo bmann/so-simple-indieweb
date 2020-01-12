@@ -6,4 +6,4 @@ collection: photos
 entries_layout: grid
 ---
 
-Sample document listing for the collection `_photos`.
+Aren't these photos lovely?
