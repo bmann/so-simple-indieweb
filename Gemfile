@@ -7,4 +7,10 @@ gem "jekyll-gist", "~> 1.4"
 gem "jekyll-feed", "~> 0.1"
 gem "jekyll-seo-tag", "~> 2.4"
 # gem "jekyll-remote-theme" # Apparent issues with Jekyll 4.x
+
+# So Simple
 gem "jekyll-theme-so-simple"
+
+# Minimal Mistakes
+gem "minimal-mistakes-jekyll"
+gem "jekyll-include-cache"
