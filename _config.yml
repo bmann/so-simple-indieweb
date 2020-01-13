@@ -24,7 +24,7 @@ name                     : &name "Boris Mann" # &name is a YAML anchor which can
 description              : &description "A simple IndieWeb template for Jekyll, powered by IndieKit & Minimal Mistakes"
 url                      : https://indieweb.bmann.ca # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "bmann/so-simple-indieweb"
+repository               : # "bmann/so-simple-indieweb"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -127,7 +127,7 @@ analytics:
 # Site Author
 author:
   name             : *name # *name is a YAML reference pointing to the &anchor earlier
-  avatar           : "/assets/images/michael-rose.jpg"
+  avatar           : "/assets/images/bio-photo-alt.jpg"
   bio              : "Open source web tinkerer. Cooks & Eats."
   location         : "Vancouver, BC"
   links:
@@ -210,7 +210,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false
       comments: true
       share: true
       related: true
@@ -229,9 +229,9 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-# paginate: 5 # amount of posts to show
-# paginate_path: /page:num/
-timezone: America/New_York # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+paginate: 10 # amount of posts to show
+paginate_path: /page:num/
+timezone: America/Vancouver # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
@@ -279,7 +279,7 @@ jekyll-archives:
     category: archive-taxonomy
     tag: archive-taxonomy
   permalinks:
-  category: /:name/
+  category: /category/:name/
   tag: /tags/:name/
 
 
