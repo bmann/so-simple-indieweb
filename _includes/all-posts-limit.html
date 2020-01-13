@@ -1,5 +1,0 @@
-{% assign posts_limit = page.posts_limit | default: 10 %}
-{% assign all_posts = site.documents | where: 'hidden', blank | sort: 'date' | reverse %}
-{%- for entry in all_posts limit: posts_limit -%}
-  {% include entry.html %}
-{%- endfor -%}
