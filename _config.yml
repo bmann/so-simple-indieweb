@@ -47,7 +47,7 @@ feed:
   path: atom.xml
 
 # Pagination - https://jekyllrb.com/docs/pagination/
-paginate: 10
+paginate: 15
 paginate_path: /page:num/
 
 # Search
@@ -78,28 +78,13 @@ tag_archive_path: "/tags/#"
 #
 indiekit:
   micropub_server: bmann-indiekit.herokuapp.com
-  auth_service: https://github.com/bmann
+  auth_service: https://github.com/bmann # replace this with whatever auth service you want to use with IndieAuth
 
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
-
-# Collections
-collections:
-  photos:
-    output: true
-    permalink: /:collection/:path/
-  bookmarks:
-    output: true
-    permalink: /:collection/:path/
-  notes:
-    output: true
-    permalink: /:collection/:path/
-  reposts:
-    output: true
-    permalink: /:collection/:path/
 
 # Front Matter Defaults
 defaults:
@@ -111,38 +96,7 @@ defaults:
       layout: post
       comments: true
       share: true
-  # Photos defaults
-  - scope:
-      path: "_photos"
-      type: photos
-    values:
-      layout: photo
-      comments: true
-      share: true
-  # Bookmarks defaults
-  - scope:
-      path: "_bookmarks"
-      type: bookmarks
-    values:
-      layout: bookmark
-      comments: true
-      share: true
-  # Notes defaults
-  - scope:
-      path: "_notes"
-      type: notes
-    values:
-      layout: note
-      comments: true
-      share: true
-  # Reposts defaults
-  - scope:
-      path: "_reposts"
-      type: reposts
-    values:
-      layout: repost
-      comments: true
-      share: true
+ 
 
 # Site Author
 author:

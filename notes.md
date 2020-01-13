@@ -1,8 +1,8 @@
 ---
 title: Notes
-layout: collection
+layout: category
 permalink: /notes/
-collection: notes
+taxonomy: Notes
 entries_layout: grid
 ---
 

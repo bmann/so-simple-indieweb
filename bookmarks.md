@@ -1,8 +1,8 @@
 ---
 title: Bookmarks
-layout: collection
+layout: category
 permalink: /bookmarks/
-collection: bookmarks
+taxonomy: Bookmarks
 entries_layout: grid
 ---
 

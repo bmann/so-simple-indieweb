@@ -1,8 +1,8 @@
 ---
 title: Photos
-layout: collection
+layout: category
 permalink: /photos/
-collection: photos
+taxonomy: Photos
 entries_layout: grid
 ---
 
