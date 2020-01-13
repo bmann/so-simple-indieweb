@@ -1,4 +1,4 @@
-# So Simple IndieWeb Demo
+# So Simple IndieWeb Template
 
 Based on the So Simple Theme and meant to be integrated with IndieKit as a micropub endpoint.
 
