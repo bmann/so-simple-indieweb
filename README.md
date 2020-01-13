@@ -12,8 +12,10 @@ Currently being deployed to Netlify, will look at making this Github Pages compa
 
 It is [easy to deploy using Heroku](https://paulrobertlloyd.github.io/indiekit/deploy). This template already has the proper link headers included, just edit your `_config.yml` to include the address of your Heroku server.
 
-## Sample Nunjucks Templates
+## IndieKit Server Notes
 
-WIP
+I ended up hacking the core server of IndieKit. Reading remote config didn't work, checking in a config file to the IndieKit on Heroku did work. Hacked the core templates and defaults file and it works.
 
-See https://github.com/paulrobertlloyd/indiekit-sandbox/tree/master/etc/templates
+Timezone offset can be set on the server by entering in a [TZ variable on env vars in Heroku](https://github.com/paulrobertlloyd/indiekit/issues/114#issuecomment-558206931).
+
+
